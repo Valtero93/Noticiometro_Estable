@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "1ebe7ef6-d565-440f-9f1d-a25a4bea0644",
+		"name": "NOTICIOMETRO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USUARIO",
+			"item": [
+				{
+					"name": "[1] crearUsuario",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"elnomitodelboskehd@gmail.com\",\n    \"password\": \"123ww4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/usuario/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[2] activarUsuario",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/activar/3abe38cb6b311623c3a7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"activar",
+								"3abe38cb6b311623c3a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[3] loginUsuario",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"elnomitodelboskehd@gmail.com\",\n    \"password\": \"123ww4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/login/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTk3NzE1NSwiZXhwIjoxNjIyNTgxOTU1fQ.VsKsvF8OJM_Hb-oFgT50rc7W2rDjFpj6r61Uw4hUxUw"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "hola@hola.com",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": []
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/usuario/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTg5Njk4OSwiZXhwIjoxNjIyNTAxNzg5fQ.Cnsgbl3xpTChxcnBtYFJL4jM3PQp8oozqf93lcTvlqU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/usuario/2/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTYyMTk3NzE1NSwiZXhwIjoxNjIyNTgxOTU1fQ.VsKsvF8OJM_Hb-oFgT50rc7W2rDjFpj6r61Uw4hUxUw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/usuario/2/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuario",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
