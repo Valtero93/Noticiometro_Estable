@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+.boton_temperatura_noticia {
+  width: 6vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 14pt;
+  letter-spacing: 2px;
+  background-color: #42e0fc;
+  border-radius: 7px;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  float: left;
+  text-align: center;
+  border-radius: 4px 0px 0px 4px;
+  height: 70px;
+  line-height: 70px;
+}
+
+.button_puntuacion {
+  background-color: #42e0fc;
+  color: white;
+}
+
+.ficha {
+  /* margin:5px; */
+  /* margin-right: 60%; */
+  padding: 5px;
+  width: 450px;
+  background-color: white;
+  color: #203459;
+  display: flex;
+  margin-bottom: 5px;
+  border-radius: 4px 4px 4px 4px;
+  position: relative;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.ficha_noticias {
+  float: left;
+}
+
+.ficha_avatar {
+  float: right;
+  margin-left: 10px;
+  height: 10px;
+}
+
+.puntuacion {
+  float: left;
+}
+
+.button_compartir {
+  float: right;
+  width: 25px;
+  height: 25px;
+}
+
+.botones {
+  margin-top: 1%;
+  margin-left: 15%;
+}
+.ficha_noticia a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 12pt;
+  padding-left: 14px;
+  text-decoration: none;
+  line-height: normal;
+}
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18pt;
+  color: #203459;
+  padding-left: 14px;
+}
+
+div .ficha_notica p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 12pt;
+  color: #203459;
+  padding-left: 14px;
+}
+.botones_ficha {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.comentarios {
+  background-color: #8598ad;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.like {
+  background-color: #5ec394;
+}
+
+.disLike {
+  background-color: #ef627a;
+}
+
+.img_compartir {
+  float: right;
+  width: 25px;
+  height: 25px;
+  background-color: #5ec394;
+  margin: 3;
+}
+.avatar {
+  border-radius: 50%;
+  height: 64px;
+  object-fit: cover;
+  object-position: center;
+  width: 64px;
+  border: 2px solid #5ec394;
+}
