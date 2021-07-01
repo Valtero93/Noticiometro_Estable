@@ -38,9 +38,10 @@ const Perfil = () => {
     <>
       {token ? (
         <div className="profilePage">
-          <h2>PERFIL</h2>
+          <h2>PERFIL</h2><br />
           {Object.keys(user).length > 0 && (
             <form onSubmit={updateUser}>
+              <br />
               <label htmlFor="avatar">
                 {user.imagen ? (
                   <img

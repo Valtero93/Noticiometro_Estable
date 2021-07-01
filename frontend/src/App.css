@@ -563,6 +563,10 @@ input[type="submit"] {
   background-color: var(--createPageSubmitHoverBackgroundColor);
 }
 
+.createPage {
+  margin: 0 auto;
+  margin-top: 60px;
+}
 /* modules/text.css */
 
 p {
@@ -571,4 +575,9 @@ p {
 
 .text--center {
   text-align: center;
+}
+div .profilePage {
+  margin: 0 auto;
+  margin-top: 60px;
+
 }
