@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import sideBarLogo from "../multimedia/logo_web.svg";
-import Avatar from "./Avatar";
+import useUserProfile from "../hooks/useUserProfle";
+import defaultAvatar from "../multimedia/defaultAvatar.png";
+import { TokenContext } from "../components/TokenContextProvider";
+import { useContext } from "react";
+import decodeTokenData from "../utils/decodeTokenData";
 
 const Sidebar = () => {
+  const [token] = useContext(TokenContext);
+  const decodedToken = decodeTokenData(token);
+  const [,setToken] = useContext(TokenContext);
+  const user = useUserProfile(decodedToken?.id, token);
+
   return (
     <nav className="col-1">
       <img
@@ -26,12 +35,29 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/perfil">
-            <i className="fas fa-user" title="Ajustes"></i>
+        <Link to="/perfil">
+        {user.imagen ? (
+            <img
+              className={"avatar"}
+              src={`http://localhost:3030/uploads/avatares/${user.imagen}`}
+              alt={`Avatar de ${user.nombre}`}
+            />
+          ) : (
+            <img
+              className={"avatar"}
+              src={defaultAvatar}
+              alt={`Avatar de ${user.nombre}`}
+            />
+          )}
           </Link>
         </li>
         <li>
-          <Avatar />
+          <button
+            className="botonSalir"
+            onClick={() => setToken("")}
+          >
+            Sign out
+           </button>
         </li>
       </ul>
     </nav>

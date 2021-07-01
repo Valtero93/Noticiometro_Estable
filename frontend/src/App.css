@@ -1,43 +1,10 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* LOGIN */
 .align {
@@ -49,7 +16,6 @@
 
 :root {
   --htmlFontSize: 100%;
-
   --bodyBackgroundColor: #2c3338;
   --bodyColor: var(--baseColor);
   --bodyFontFamily: 'Open Sans';
@@ -57,27 +23,29 @@
   --bodyFontSize: 0.875rem;
   --bodyFontWeight: 400;
   --bodyLineHeight: 1.5;
-}
-
-/* modules/anchor.css */
-
-:root {
   --anchorColor: rgb(48, 35, 224);
-}
-
-a {
-  color: var(--anchorColor);
-  outline: 0;
-  text-decoration: none;
-}
-
-/* modules/form.css */
-
-:root {
   --formGap: 0.875rem;
+  --loginBorderRadus: 0.25rem;
+  --loginColor: #eee;
+  --loginInputBackgroundColor: #3b4148;
+  --loginInputHoverBackgroundColor: #434a52;
+  --loginLabelBackgroundColor: #363b41;
+  --loginSubmitBackgroundColor: #ea4c88;
+  --loginSubmitColor: white;
+  --loginSubmitHoverBackgroundColor: #d44179;
+  --registerBorderRadus: 0.25rem;
+  --registerColor: #eee;
+  --registerInputBackgroundColor: #3b4148;
+  --registerInputHoverBackgroundColor: #434a52;
+  --registerLabelBackgroundColor: #363b41;
+  --registerSubmitBackgroundColor: #ea4c88;
+  --registerSubmitColor: white;
+  --registerSubmitHoverBackgroundColor: #d44179;
 }
 
-input {
+
+.login input,
+.register input {
   background-image: none;
   border: 0;
   color: inherit;
@@ -88,7 +56,8 @@ input {
   transition: background-color 0.3s;
 }
 
-input[type='submit'] {
+.login input[type='submit'],
+.register input[type='submit']{
   cursor: pointer;
 }
 
@@ -113,19 +82,6 @@ input[type='submit'] {
 
 /* modules/login.css */
 
-:root {
-  --loginBorderRadus: 0.25rem;
-  --loginColor: #eee;
-
-  --loginInputBackgroundColor: #3b4148;
-  --loginInputHoverBackgroundColor: #434a52;
-
-  --loginLabelBackgroundColor: #363b41;
-
-  --loginSubmitBackgroundColor: #ea4c88;
-  --loginSubmitColor: white;
-  --loginSubmitHoverBackgroundColor: #d44179;
-}
 
 .login {
   color: var(--loginColor);
@@ -176,19 +132,12 @@ input[type='submit'] {
 
 /* modules/text.css */
 
-p {
-  margin-block: 1.5rem;
-}
 
 .text--center {
   text-align: center;
 }
 
 /* REGISTER */
-.align {
-  display: grid;
-  place-items: center;
-}
 
 .grid {
   inline-size: 90%;
@@ -207,58 +156,6 @@ p {
   width: 1px;
 }
 
-/* layout/base.css */
-
-:root {
-  --htmlFontSize: 100%;
-
-  --bodyBackgroundColor: #2c3338;
-  --bodyColor: var(--baseColor);
-  --bodyFontFamily: 'Open Sans';
-  --bodyFontFamilyFallback: sans-serif;
-  --bodyFontSize: 0.875rem;
-  --bodyFontWeight: 400;
-  --bodyLineHeight: 1.5;
-}
-
-/* modules/anchor.css */
-
-:root {
-  --anchorColor: rgb(48, 35, 224);
-}
-
-a {
-  color: var(--anchorColor);
-  outline: 0;
-  text-decoration: none;
-}
-
-/* modules/form.css */
-
-:root {
-  --formGap: 0.875rem;
-}
-
-input {
-  background-image: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  transition: background-color 0.3s;
-}
-
-input[type='submit'] {
-  cursor: pointer;
-}
-
-.form {
-  display: grid;
-  gap: var(--formGap);
-}
-
 .form input[type='email'],
 .form input[type='password'],
 .form input[type='text'],
@@ -275,20 +172,6 @@ input[type='submit'] {
 }
 
 /* modules/register.css */
-
-:root {
-  --registerBorderRadus: 0.25rem;
-  --registerColor: #eee;
-
-  --registerInputBackgroundColor: #3b4148;
-  --registerInputHoverBackgroundColor: #434a52;
-
-  --registerLabelBackgroundColor: #363b41;
-
-  --registerSubmitBackgroundColor: #ea4c88;
-  --registerSubmitColor: white;
-  --registerSubmitHoverBackgroundColor: #d44179;
-}
 
 .register {
   color: var(--registerColor);
@@ -340,33 +223,21 @@ input[type='submit'] {
 
 /* modules/text.css */
 
-p {
-  margin-block: 1.5rem;
-}
 
 .text--center {
   text-align: center;
 }
 
 .botonSalir {
-  border: 1px solid #203459; /*anchura, estilo y color borde*/
-  padding: 10px; /*espacio alrededor texto*/
-  background-color: #ef627a; /*color botón*/
-  color: #203459; /*color texto*/
-  text-decoration: none; /*decoración texto*/
-  text-transform: uppercase; /*capitalización texto*/
-  font-family: 'Helvetica', sans-serif; /*tipografía texto*/
-  border-radius: 50px; /*bordes redondos*/
-  width: 150px;
-  margin-left: 38%;
-  bottom: 10px;
-  position: absolute;
-}
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: none;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  font-size: 1rem;
 
-.puntuacion {
-  margin-left: 5%;
-  margin-right: 5%;
-  height: 250px;
 }
 
 .ficha_avatar {
@@ -416,54 +287,11 @@ p {
   --anchorColor: rgb(48, 35, 224);
 }
 
-a {
-  color: var(--anchorColor);
-  outline: 0;
-  text-decoration: none;
-}
-
 /* modules/form.css */
 
 :root {
   --formGap: 0.875rem;
 }
-
-input {
-  background-image: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  transition: background-color 0.3s;
-}
-
-input[type='submit'] {
-  cursor: pointer;
-}
-
-.form {
-  display: grid;
-  gap: var(--formGap);
-}
-
-.form input[type='email'],
-.form input[type='password'],
-.form input[type='text'],
-.form input[type='submit'] {
-  inline-size: 100%;
-}
-
-.form__field {
-  display: flex;
-}
-
-.form__input {
-  flex: 1;
-}
-
-/* modules/register.css */
 
 :root {
   --createPageBorderRadus: 0.25rem;
@@ -546,10 +374,6 @@ p {
 .text--center {
   text-align: center;
 }
-div .profilePage {
-  margin: 0 auto;
-  margin-top: 60px;
-}
 
 /* NO LOGIN */
 
@@ -613,6 +437,7 @@ div .profilePage {
   text-transform: uppercase;
   padding: 0.5rem 1.75rem;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .no_login_buttons_login {
@@ -622,4 +447,95 @@ div .profilePage {
   text-transform: uppercase;
   padding: 0.5rem 1.75rem;
   border-radius: 10px;
+  text-decoration: none;
 }
+
+/* PAGE CONTAINER */
+
+.page_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgb(144, 144, 144);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.page_container_title{
+  height: 15%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  width: 80%;
+}
+
+
+.page_container_title h2 {
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.page_container_content {
+  height: 85%;
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* PROFILE PAGE */
+
+
+.page_content_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 2rem;
+  font-size: 1.25rem;
+  margin: 2rem 0;
+}
+
+.page_content_form .inputWrapper {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page_content_form .inputWrapper label:not(.updateFormAvatar) {
+  margin-bottom: 1rem;
+  color:rgb(82, 82, 82)
+}
+
+.page_content_form .inputWrapper label.updateFormAvatar img {
+  width: 80px;
+  height: 80px;
+}
+
+.page_content_form .inputWrapper input {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  border: 1px solid rgb(144, 144, 144);
+  outline: none;
+}
+
+
+.page_content_form input[type="submit"] {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: none;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgb(63, 63, 63);
+  font-size: 1rem;
+}
+

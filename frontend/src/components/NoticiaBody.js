@@ -2,9 +2,9 @@ const Noticia = (props) => {
   const { titulo, descripcion, enlace } = props;
 
   return (
-    <div className="ficha_notica">
+    <div className="content_body">
       <a href={enlace} className="url">
-        {enlace}
+        {enlace.slice(0, 30) + "..."}
       </a>
 
       <h1>{titulo}</h1>

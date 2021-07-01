@@ -1,122 +1,135 @@
 @charset "utf-8";
 /* CSS Document */
 
-.boton_temperatura_noticia {
-  width: 6vh;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 14pt;
-  letter-spacing: 2px;
-  background-color: #42e0fc;
-  border-radius: 7px;
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
-  float: left;
-  text-align: center;
-  border-radius: 4px 0px 0px 4px;
-  height: 70px;
-  line-height: 70px;
+:root {
+  --puntuacionBackgroundColor: #42e0fc;
+  --likesBackgroundColor: #5ec394;
+  --dislikeBackgroundColor: #ef627a;
 }
 
-.button_puntuacion {
-  background-color: #42e0fc;
-  color: white;
-}
-
-.ficha {
-  /* margin:5px; */
-  /* margin-right: 60%; */
-  padding: 5px;
-  width: 450px;
-  background-color: white;
-  color: #203459;
-  display: flex;
-  margin-bottom: 5px;
-  border-radius: 4px 4px 4px 4px;
+.home_page {
   position: relative;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
-    0 0 0px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
-    0 0 0px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
 }
 
-.ficha_noticias {
-  float: left;
+.lista_fichas {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.ficha_avatar {
-  float: right;
-  margin-left: 10px;
-  height: 10px;
+.ficha_noticia {
+  display: flex;
+  height: 275px;
+  width: 45%;
+  margin: 1rem;
+}
+
+.puntuacion_container {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .puntuacion {
-  float: left;
-}
-
-.button_compartir {
-  float: right;
-  width: 25px;
-  height: 25px;
-}
-
-.botones {
-  margin-top: 1%;
-  margin-left: 15%;
-}
-.ficha_noticia a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-size: 12pt;
-  padding-left: 14px;
-  text-decoration: none;
-  line-height: normal;
-}
-h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 18pt;
-  color: #203459;
-  padding-left: 14px;
-}
-
-div .ficha_notica p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 12pt;
-  color: #203459;
-  padding-left: 14px;
-}
-.botones_ficha {
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.comentarios {
-  background-color: #8598ad;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  background-color: var(--puntuacionBackgroundColor);
+  margin-top: 2rem;
+  width: 50%;
+  padding: 1rem 0;
+  border-radius: 10px 0px 0px 10px;
   color: white;
+  font-size: 2rem;
+  text-align: center;
 }
 
-.like {
-  background-color: #5ec394;
+.puntuacion_container .delete {
+  margin-top: 2rem;
+  margin-right: 15%;
 }
 
-.disLike {
-  background-color: #ef627a;
+.content_and_votes_container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
 }
 
-.img_compartir {
-  float: right;
-  width: 25px;
-  height: 25px;
-  background-color: #5ec394;
-  margin: 3;
+.content {
+  width: 100%;
+  height: 80%;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  box-shadow: 0px -2px 4px rgb(209, 209, 209);
+  padding: 2rem;
 }
+
+.content_body,
+.content_author_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content_body {
+  width:80%;
+  align-items: flex-start
+}
+
+.content_body a {
+  color:rgb(177, 177, 177);
+  text-decoration: none;
+}
+
+.content_body p {
+  color:rgb(139, 139, 139);
+}
+
+.content_author_info {
+  width: 20%;
+  align-items: center;
+}
+
+.content_author_info p {
+  color: rgb(139, 139, 139)
+}
+
+.votes {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.votes_likes {
+  color: var(--likesBackgroundColor);
+  background-color: rgb(202, 255, 202);
+  margin-right: 1rem;
+  border-radius: 0px 0px 10px 10px;
+  padding: 1rem;
+  font-weight: 900;
+}
+
+.votes_dislikes {
+  color: var(--dislikeBackgroundColor);
+  background-color: rgb(255, 211, 211);
+  border-radius: 0px 0px 10px 10px;
+  padding: 1rem;
+  font-weight: 900;
+}
+
+.votes i {
+  margin-right: 1rem;
+}
+
+/* AVATAR */
+
 .avatar {
   border-radius: 50%;
   height: 64px;

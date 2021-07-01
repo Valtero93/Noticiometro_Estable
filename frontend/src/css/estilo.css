@@ -33,16 +33,17 @@ body {
   border-radius: 8px 0px 0px 8px;
 }
 .col-2 {
-  display: flex;
-  flex-direction: column;
   flex: 8;
-  background-color: rgb(238, 243, 245);
+  height: 100%;
+  position: relative;
+  background-color: rgb(228, 233, 241);
 }
 
 .content {
   display: flex;
   flex-direction: row;
 }
+
 article {
   flex: 4;
   min-height: 70vh;
@@ -61,8 +62,7 @@ nav {
 }
 
 ul {
-  list-style-type: none;
-  flex-direction: column;
+  list-style: none;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -74,15 +74,13 @@ ul {
 }
 
 .sidebar_links_list li {
-  margin: 1.5rem;
+  margin: 1.5rem 0;
+  width: 100%;
 }
 
 .sidebar_links_list a {
   display: block;
-  background-color: #ffffff;
   text-align: center;
-  padding: 0;
-  margin: 0;
   text-decoration: none;
   color: #8598ad;
   padding: 4vh;

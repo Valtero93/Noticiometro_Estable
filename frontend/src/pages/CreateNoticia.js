@@ -22,22 +22,14 @@ const CreateNoticia = (props) => {
     if (res.ok) history.push(`/noticia/${body.id}`);
   };
   return (
-    // <div className="createPage">
-    //   <form onSubmit={createNoticia}>
-    //     <label htmlFor="titulo">Título:</label>
-    //     <input id="titulo" value={titulo} onChange={(e) => setTitulo(e.target.value)} required></input>
-    //     <label htmlFor="descripcion">Descripción:</label>
-    //     <input id="descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)}></input>
-    //     <label type="url" htmlFor="enlace">
-    //       Enlace:
-    //     </label>
-    //     <input id="enlace" value={enlace} onChange={(e) => setEnlace(e.target.value)} required></input>
-    //     <input type="submit" value="Crear noticia"></input>
-    //   </form>
-    // </div>
-    <div className="createPage">
-      <form className="form_field" id="titulo" onSubmit={createNoticia}>
-        <div>
+    <div className="page_container">
+      <div className="page_container_title">
+        <h2>Crear noticia</h2>
+      </div>
+
+      <div className="page_container_content">
+      <form className="page_content_form" onSubmit={createNoticia}>
+        <div className="inputWrapper">
           <label htmlFor="titulo">Título:</label>
           <input
             type="titulo"
@@ -47,7 +39,7 @@ const CreateNoticia = (props) => {
             required
           ></input>
         </div>
-        <div>
+        <div className="inputWrapper">
           <label htmlFor="descripcion">Descripción:</label>
           <input
             type="descripcion"
@@ -56,8 +48,7 @@ const CreateNoticia = (props) => {
             onChange={(e) => setDescripcion(e.target.value)}
           ></input>
         </div>
-        <div></div>
-        <div>
+        <div className="inputWrapper">
           <label type="url" htmlFor="enlace">
             Enlace:
           </label>
@@ -69,9 +60,10 @@ const CreateNoticia = (props) => {
             required
           ></input>
         </div>
-        <div></div>
+
         <input type="submit" value="Crear noticia"></input>
       </form>
+      </div>
     </div>
   );
 };

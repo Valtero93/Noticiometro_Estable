@@ -17,7 +17,7 @@ const ListFichas = (props) => {
     ></FichaNoticia>
   )); // [<Message msg={OBJETOMENSAJE1}, <Message msg={OBJETOMENSAJE2},  <Message msg={OBJETOMENSAJE3}]
 
-  return <ul>{arrayFichas}</ul>;
+  return <ul className="lista_fichas">{arrayFichas}</ul>;
 };
 
 export default ListFichas;

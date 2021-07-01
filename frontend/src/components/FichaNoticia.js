@@ -12,8 +12,8 @@ const FichaNoticia = (props) => {
   const decodedToken = decodeTokenData(token);
   const { id, userId, titulo, descripcion, enlace, imagen, nombre } = props;
   const history = useHistory();
-  const [likes, setLikes] = useLikes(id);
-  const [dislikes, setDislikes] = useDislikes(id);
+  const [likes] = useLikes(id);
+  const [dislikes] = useDislikes(id);
 
   const goToNoticia = (e) => {
     e.stopPropagation();
@@ -39,7 +39,7 @@ const FichaNoticia = (props) => {
       },
       body: JSON.stringify({ voto: 1 }),
     });
-    if (res.ok) setLikes(likes + 2);
+    if (res.ok) history.go();
   };
   const dislikeNoticia = async (e) => {
     e.stopPropagation();
@@ -51,33 +51,46 @@ const FichaNoticia = (props) => {
       },
       body: JSON.stringify({ voto: 0 }),
     });
-    if (res.ok) setDislikes(dislikes + 2);
+    if (res.ok) history.go();
   };
 
   return (
-    <div className="puntuacion" onClick={goToNoticia}>
-      {(likes || likes === 0) && (dislikes || dislikes === 0) && (
-        <div className="boton_temperatura_noticia">{likes - dislikes}</div>
-      )}
-
-      <div className="ficha">
-        <NoticiaBody titulo={titulo} descripcion={descripcion} enlace={enlace} />
-        {imagen ? (
-          <img
-            className={'avatar'}
-            src={`http://localhost:3030/uploads/avatares/${imagen}`}
-            alt={`Avatar de ${nombre}`}
-          />
-        ) : (
-          <img className={'avatar'} src={defaultAvatar} alt={`Avatar de ${nombre}`} />
-        )}
-        <p>{nombre}</p>
-        {decodedToken.id === userId && <i className="fas fa-trash fa-lg" title="Borrar" onClick={deleteNoticia} />}
+    <div className="ficha_noticia" onClick={goToNoticia}>
+      <div className="puntuacion_container">
+          {(likes || likes === 0) && (dislikes || dislikes === 0) && (
+            <div className="puntuacion">{likes - dislikes}</div>
+          )}
+           {decodedToken.id === userId && <i className="fas fa-trash fa-lg delete" title="Borrar" onClick={deleteNoticia} />}
       </div>
+      <div className="content_and_votes_container">
+            <div className="content">
+              <NoticiaBody titulo={titulo} descripcion={descripcion} enlace={enlace} />
+              <div className="content_author_info">
+              {imagen ? (
+              <img
+                  className={'avatar'}
+                  src={`http://localhost:3030/uploads/avatares/${imagen}`}
+                  alt={`Avatar de ${nombre}`}
+                />
+              ) : (
+                <img className={'avatar'} src={defaultAvatar} alt={`Avatar de ${nombre}`} />
+              )}
+                <p>{nombre}</p>
+              </div>
 
-      <div className="botones">
-        <i className="fas fa-check fa-lg like" title="Like" onClick={likeNoticia} />
-        <i className="fas fa-times fa-lg disLike" title="Dislike" onClick={dislikeNoticia} />
+            </div>
+
+            <div className="votes">
+              <div className="votes_likes">
+                <i className="fas fa-check fa-lg like" title="Like" onClick={likeNoticia} />
+                {likes}
+              </div>
+              <div className="votes_dislikes">
+               <i className="fas fa-times fa-lg disLike" title="Dislike" onClick={dislikeNoticia} />
+                {dislikes}
+              </div>
+            </div>
+           
       </div>
     </div>
   );

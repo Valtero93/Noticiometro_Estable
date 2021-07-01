@@ -37,12 +37,15 @@ const Perfil = () => {
   return (
     <>
       {token ? (
-        <div className="profilePage">
-          <h2>PERFIL</h2><br />
+        <div className="page_container">
+          <div className="page_container_title"
+        ><h2>Perfil</h2>
+          </div>
+          <div className="page_container_content">
           {Object.keys(user).length > 0 && (
-            <form onSubmit={updateUser}>
-              <br />
-              <label htmlFor="avatar">
+            <form className="page_content_form" onSubmit={updateUser}>
+              <div className="inputWrapper">
+              <label className="updateFormAvatar" htmlFor="avatar">
                 {user.imagen ? (
                   <img
                     className={"avatar"}
@@ -57,6 +60,8 @@ const Perfil = () => {
                   />
                 )}
               </label>
+              
+              
               <input
                 ref={avatarInput}
                 type="file"
@@ -65,8 +70,10 @@ const Perfil = () => {
                 accept="image/*"
                 onChange={updateUser}
               />
+              </div>
 
-              <label htmlFor="nombre">Nombre</label>
+              <div className="inputWrapper">
+              <label className="updateFormName" htmlFor="nombre">Nombre</label>
               <input
                 id="nombre"
                 name="nombre"
@@ -74,8 +81,10 @@ const Perfil = () => {
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
               />
+              </div>
 
-              <label htmlFor="email">Email</label>
+              <div className="inputWrapper">
+              <label className="updateFormEmail" htmlFor="email">Email</label>
               <input
                 id="email"
                 name="email"
@@ -83,9 +92,16 @@ const Perfil = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+
+              </div>
+
+              
               <input type="submit" value="Guardar cambios" />
+      
             </form>
+            
           )}
+          </div>
         </div>
       ) : (
         <Redirect to="/"></Redirect>
