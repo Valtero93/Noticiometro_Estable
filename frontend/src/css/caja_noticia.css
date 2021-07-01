@@ -3,7 +3,7 @@
 
 .boton_temperatura_noticia {
   width: 6vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 14pt;
   letter-spacing: 2px;
@@ -36,8 +36,10 @@
   margin-bottom: 5px;
   border-radius: 4px 4px 4px 4px;
   position: relative;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -66,7 +68,7 @@
   margin-left: 15%;
 }
 .ficha_noticia a {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-size: 12pt;
   padding-left: 14px;
@@ -74,7 +76,7 @@
   line-height: normal;
 }
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 18pt;
   color: #203459;
@@ -82,7 +84,7 @@ h1 {
 }
 
 div .ficha_notica p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 12pt;
   color: #203459;
@@ -95,7 +97,7 @@ div .ficha_notica p {
 
 .comentarios {
   background-color: #8598ad;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: white;
 }

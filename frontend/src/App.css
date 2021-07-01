@@ -372,3 +372,203 @@ p {
 .text--center {
   text-align: center;
 }
+
+.botonSalir {
+  border: 1px solid #203459; /*anchura, estilo y color borde*/
+  padding: 10px; /*espacio alrededor texto*/
+  background-color: #ef627a; /*color botón*/
+  color: #203459; /*color texto*/
+  text-decoration: none; /*decoración texto*/
+  text-transform: uppercase; /*capitalización texto*/
+  font-family: "Helvetica", sans-serif; /*tipografía texto*/
+  border-radius: 50px; /*bordes redondos*/
+  width: 150px;
+  margin-left: 38%;
+  bottom: 10px;
+  position: absolute;
+}
+
+.puntuacion {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 250px;
+}
+
+.ficha_avatar {
+  margin-right: 25%;
+}
+
+/* createPage */
+.align {
+  display: grid;
+  place-items: center;
+}
+
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 20rem;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* layout/base.css */
+
+:root {
+  --htmlFontSize: 100%;
+
+  --bodyBackgroundColor: #2c3338;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+
+/* modules/anchor.css */
+
+:root {
+  --anchorColor: rgb(48, 35, 224);
+}
+
+a {
+  color: var(--anchorColor);
+  outline: 0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+/* modules/form.css */
+
+:root {
+  --formGap: 0.875rem;
+}
+
+input {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.form {
+  display: grid;
+  gap: var(--formGap);
+}
+
+.form input[type="birthday"],
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"] {
+  inline-size: 100%;
+}
+
+.form__field {
+  display: flex;
+}
+
+.form__input {
+  flex: 1;
+}
+
+/* modules/register.css */
+
+:root {
+  --createPageBorderRadus: 0.25rem;
+  --createPageColor: rgb(10, 10, 10);
+
+  --createPageInputBackgroundColor: rgb(238, 243, 245);
+  --createPageInputHoverBackgroundColor: rgb(238, 243, 245);
+
+  --createPageLabelBackgroundColor: rgb(238, 243, 245);
+
+  --createPageSubmitBackgroundColor: #eeb484;
+  --createPageSubmitColor: white;
+  --createPageSubmitHoverBackgroundColor: #4e4c4d;
+}
+
+.createPage {
+  color: var(--createPageColor);
+}
+
+.createPage label,
+.createPage input[type="titulo"],
+.createPage input[type="descripcion"],
+.createPage input[type="enlace"] {
+  border-radius: var(--createPageBorderRadus);
+  padding: 1rem;
+}
+
+.createPage label,
+.createPage input[type="titulo"],
+.createPage input[type="descripcion"],
+.createPage input[type="enlace"] {
+  max-width: fit-content;
+}
+
+.createPage label {
+  background-color: var(--createPageLabelBackgroundColor);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-inline: 1.25rem;
+}
+
+.createPage input[type="titulo"],
+.createPage input[type="descripcion"],
+.createPage input[type="enlace"] {
+  background-color: var(--createPageInputBackgroundColor);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.createPage input[type="birthday"]:focus,
+.createPage input[type="birthday"]:hover,
+.createPage input[type="password"]:focus,
+.createPage input[type="password"]:hover,
+.createPage input[type="text"]:focus,
+.createPage input[type="text"]:hover {
+  background-color: var(--createPageInputHoverBackgroundColor);
+}
+
+.createPage input[type="submit"] {
+  background-color: var(--createPageSubmitBackgroundColor);
+  color: var(--createPageSubmitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.createPage input[type="submit"]:focus,
+.createPage input[type="submit"]:hover {
+  background-color: var(--createPageSubmitHoverBackgroundColor);
+}
+
+/* modules/text.css */
+
+p {
+  margin-block: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}

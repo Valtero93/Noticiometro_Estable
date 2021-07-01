@@ -13,10 +13,11 @@ const Inicio = (props) => {
         <>
           {noticias.length > 0 && <ListFichas noticias={noticias} />}
           <button
+            className="botonSalir"
             onClick={() => setToken("")}
-            style={{ backgroundColor: "green", zIndex: "999" }}
+            style={{ backgroundColor: "#ef627a", zIndex: "999" }}
           >
-            sign out
+            Sign out
           </button>
         </>
       ) : (

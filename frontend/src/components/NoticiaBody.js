@@ -3,7 +3,9 @@ const Noticia = (props) => {
 
   return (
     <div className="ficha_notica">
-      <a href={enlace}>{enlace}</a>
+      <a href={enlace} className="url">
+        {enlace}
+      </a>
 
       <h1>{titulo}</h1>
       <p>{descripcion}</p>

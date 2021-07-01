@@ -1,10 +1,16 @@
-import { Link } from 'react-router-dom';
-import sideBarLogo from '../multimedia/logo_web.svg';
+import { Link } from "react-router-dom";
+import sideBarLogo from "../multimedia/logo_web.svg";
+import Avatar from "./Avatar";
 
 const Sidebar = () => {
   return (
     <nav className="col-1">
-      <img className="centrar" src={sideBarLogo} alt="Estrella SVG" width="85" />
+      <img
+        className="centrar"
+        src={sideBarLogo}
+        alt="Estrella SVG"
+        width="85"
+      />
       <ul className="sidebar_links_list">
         <li>
           {/* <NavLink to="/recientes">
@@ -21,8 +27,11 @@ const Sidebar = () => {
         </li>
         <li>
           <Link to="/perfil">
-            <i className="fas fa-cogs fa-lg" title="Ajustes"></i>
+            <i className="fas fa-user" title="Ajustes"></i>
           </Link>
+        </li>
+        <li>
+          <Avatar />
         </li>
       </ul>
     </nav>
