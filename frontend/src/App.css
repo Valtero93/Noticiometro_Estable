@@ -37,29 +37,12 @@
   }
 } */
 
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 /* LOGIN */
 .align {
   display: grid;
   place-items: center;
-}
-
-.grid {
-  inline-size: 90%;
-  margin-inline: auto;
-  max-inline-size: 20rem;
-}
-
-.hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }
 
 /* layout/base.css */
@@ -69,7 +52,7 @@
 
   --bodyBackgroundColor: #2c3338;
   --bodyColor: var(--baseColor);
-  --bodyFontFamily: "Open Sans";
+  --bodyFontFamily: 'Open Sans';
   --bodyFontFamilyFallback: sans-serif;
   --bodyFontSize: 0.875rem;
   --bodyFontWeight: 400;
@@ -86,11 +69,6 @@ a {
   color: var(--anchorColor);
   outline: 0;
   text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  text-decoration: underline;
 }
 
 /* modules/form.css */
@@ -110,7 +88,7 @@ input {
   transition: background-color 0.3s;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   cursor: pointer;
 }
 
@@ -119,9 +97,9 @@ input[type="submit"] {
   gap: var(--formGap);
 }
 
-.form input[type="password"],
-.form input[type="text"],
-.form input[type="submit"] {
+.form input[type='password'],
+.form input[type='text'],
+.form input[type='submit'] {
   inline-size: 100%;
 }
 
@@ -154,9 +132,10 @@ input[type="submit"] {
 }
 
 .login label,
-.login input[type="text"],
-.login input[type="password"],
-.login input[type="submit"] {
+.login input[type='text'],
+.login input[type='password'],
+.login input[type='submit'],
+.login input[type='email'] {
   border-radius: var(--loginBorderRadus);
   padding: 1rem;
 }
@@ -168,29 +147,30 @@ input[type="submit"] {
   padding-inline: 1.25rem;
 }
 
-.login input[type="password"],
-.login input[type="text"] {
+.login input[type='password'],
+.login input[type='text'],
+.login input[type='email'] {
   background-color: var(--loginInputBackgroundColor);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.login input[type="password"]:focus,
-.login input[type="password"]:hover,
-.login input[type="text"]:focus,
-.login input[type="text"]:hover {
+.login input[type='password']:focus,
+.login input[type='password']:hover,
+.login input[type='text']:focus,
+.login input[type='text']:hover {
   background-color: var(--loginInputHoverBackgroundColor);
 }
 
-.login input[type="submit"] {
+.login input[type='submit'] {
   background-color: var(--loginSubmitBackgroundColor);
   color: var(--loginSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.login input[type="submit"]:focus,
-.login input[type="submit"]:hover {
+.login input[type='submit']:focus,
+.login input[type='submit']:hover {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
 
@@ -234,7 +214,7 @@ p {
 
   --bodyBackgroundColor: #2c3338;
   --bodyColor: var(--baseColor);
-  --bodyFontFamily: "Open Sans";
+  --bodyFontFamily: 'Open Sans';
   --bodyFontFamilyFallback: sans-serif;
   --bodyFontSize: 0.875rem;
   --bodyFontWeight: 400;
@@ -251,11 +231,6 @@ a {
   color: var(--anchorColor);
   outline: 0;
   text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  text-decoration: underline;
 }
 
 /* modules/form.css */
@@ -275,7 +250,7 @@ input {
   transition: background-color 0.3s;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   cursor: pointer;
 }
 
@@ -284,10 +259,10 @@ input[type="submit"] {
   gap: var(--formGap);
 }
 
-.form input[type="birthday"],
-.form input[type="password"],
-.form input[type="text"],
-.form input[type="submit"] {
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='text'],
+.form input[type='submit'] {
   inline-size: 100%;
 }
 
@@ -320,10 +295,10 @@ input[type="submit"] {
 }
 
 .register label,
-.register input[type="birthday"],
-.register input[type="text"],
-.register input[type="password"],
-.register input[type="submit"] {
+.register input[type='email'],
+.register input[type='text'],
+.register input[type='password'],
+.register input[type='submit'] {
   border-radius: var(--registerBorderRadus);
   padding: 1rem;
 }
@@ -335,31 +310,31 @@ input[type="submit"] {
   padding-inline: 1.25rem;
 }
 
-.register input[type="birthday"],
-.register input[type="password"],
-.register input[type="text"] {
+.register input[type='email'],
+.register input[type='password'],
+.register input[type='text'] {
   background-color: var(--registerInputBackgroundColor);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.register input[type="birthday"]:focus,
-.register input[type="birthday"]:hover,
-.register input[type="password"]:focus,
-.register input[type="password"]:hover,
-.register input[type="text"]:focus,
-.register input[type="text"]:hover {
+.register input[type='email']:focus,
+.register input[type='email']:hover,
+.register input[type='password']:focus,
+.register input[type='password']:hover,
+.register input[type='text']:focus,
+.register input[type='text']:hover {
   background-color: var(--registerInputHoverBackgroundColor);
 }
 
-.register input[type="submit"] {
+.register input[type='submit'] {
   background-color: var(--registerSubmitBackgroundColor);
   color: var(--registerSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.register input[type="submit"]:focus,
-.register input[type="submit"]:hover {
+.register input[type='submit']:focus,
+.register input[type='submit']:hover {
   background-color: var(--registerSubmitHoverBackgroundColor);
 }
 
@@ -380,7 +355,7 @@ p {
   color: #203459; /*color texto*/
   text-decoration: none; /*decoración texto*/
   text-transform: uppercase; /*capitalización texto*/
-  font-family: "Helvetica", sans-serif; /*tipografía texto*/
+  font-family: 'Helvetica', sans-serif; /*tipografía texto*/
   border-radius: 50px; /*bordes redondos*/
   width: 150px;
   margin-left: 38%;
@@ -428,7 +403,7 @@ p {
 
   --bodyBackgroundColor: #2c3338;
   --bodyColor: var(--baseColor);
-  --bodyFontFamily: "Open Sans";
+  --bodyFontFamily: 'Open Sans';
   --bodyFontFamilyFallback: sans-serif;
   --bodyFontSize: 0.875rem;
   --bodyFontWeight: 400;
@@ -445,11 +420,6 @@ a {
   color: var(--anchorColor);
   outline: 0;
   text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  text-decoration: underline;
 }
 
 /* modules/form.css */
@@ -469,7 +439,7 @@ input {
   transition: background-color 0.3s;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   cursor: pointer;
 }
 
@@ -478,10 +448,10 @@ input[type="submit"] {
   gap: var(--formGap);
 }
 
-.form input[type="birthday"],
-.form input[type="password"],
-.form input[type="text"],
-.form input[type="submit"] {
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='text'],
+.form input[type='submit'] {
   inline-size: 100%;
 }
 
@@ -514,17 +484,17 @@ input[type="submit"] {
 }
 
 .createPage label,
-.createPage input[type="titulo"],
-.createPage input[type="descripcion"],
-.createPage input[type="enlace"] {
+.createPage input[type='titulo'],
+.createPage input[type='descripcion'],
+.createPage input[type='enlace'] {
   border-radius: var(--createPageBorderRadus);
   padding: 1rem;
 }
 
 .createPage label,
-.createPage input[type="titulo"],
-.createPage input[type="descripcion"],
-.createPage input[type="enlace"] {
+.createPage input[type='titulo'],
+.createPage input[type='descripcion'],
+.createPage input[type='enlace'] {
   max-width: fit-content;
 }
 
@@ -535,31 +505,31 @@ input[type="submit"] {
   padding-inline: 1.25rem;
 }
 
-.createPage input[type="titulo"],
-.createPage input[type="descripcion"],
-.createPage input[type="enlace"] {
+.createPage input[type='titulo'],
+.createPage input[type='descripcion'],
+.createPage input[type='enlace'] {
   background-color: var(--createPageInputBackgroundColor);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.createPage input[type="birthday"]:focus,
-.createPage input[type="birthday"]:hover,
-.createPage input[type="password"]:focus,
-.createPage input[type="password"]:hover,
-.createPage input[type="text"]:focus,
-.createPage input[type="text"]:hover {
+.createPage input[type='email']:focus,
+.createPage input[type='email']:hover,
+.createPage input[type='password']:focus,
+.createPage input[type='password']:hover,
+.createPage input[type='text']:focus,
+.createPage input[type='text']:hover {
   background-color: var(--createPageInputHoverBackgroundColor);
 }
 
-.createPage input[type="submit"] {
+.createPage input[type='submit'] {
   background-color: var(--createPageSubmitBackgroundColor);
   color: var(--createPageSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.createPage input[type="submit"]:focus,
-.createPage input[type="submit"]:hover {
+.createPage input[type='submit']:focus,
+.createPage input[type='submit']:hover {
   background-color: var(--createPageSubmitHoverBackgroundColor);
 }
 
@@ -579,5 +549,77 @@ p {
 div .profilePage {
   margin: 0 auto;
   margin-top: 60px;
+}
 
+/* NO LOGIN */
+
+.no_login_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.no_login {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('./multimedia/x.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.no_login_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(31, 54, 71);
+}
+
+.no_login_title h2 {
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+
+.no_login_title p {
+  font-weight: 400;
+  color: rgb(148, 148, 148);
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.no_login_buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  margin-top: 3rem;
+}
+
+.no_login_buttons_register {
+  font-size: 1.25rem;
+  background-color: rgb(79, 167, 79);
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  padding: 0.5rem 1.75rem;
+  border-radius: 10px;
+}
+
+.no_login_buttons_login {
+  font-size: 1.25rem;
+  background-color: rgb(236, 102, 102);
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  padding: 0.5rem 1.75rem;
+  border-radius: 10px;
 }

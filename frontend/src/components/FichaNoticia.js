@@ -12,8 +12,8 @@ const FichaNoticia = (props) => {
   const decodedToken = decodeTokenData(token);
   const { id, userId, titulo, descripcion, enlace, imagen, nombre } = props;
   const history = useHistory();
-  const likes = useLikes(id);
-  const dislikes = useDislikes(id);
+  const [likes, setLikes] = useLikes(id);
+  const [dislikes, setDislikes] = useDislikes(id);
 
   const goToNoticia = (e) => {
     e.stopPropagation();
@@ -39,7 +39,7 @@ const FichaNoticia = (props) => {
       },
       body: JSON.stringify({ voto: 1 }),
     });
-    if (res.ok) history.go();
+    if (res.ok) setLikes(likes + 2);
   };
   const dislikeNoticia = async (e) => {
     e.stopPropagation();
@@ -51,7 +51,7 @@ const FichaNoticia = (props) => {
       },
       body: JSON.stringify({ voto: 0 }),
     });
-    if (res.ok) history.go();
+    if (res.ok) setDislikes(dislikes + 2);
   };
 
   return (

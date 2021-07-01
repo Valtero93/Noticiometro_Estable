@@ -8,6 +8,16 @@ async function borrarNoticia(req, res, next) {
 
     try {
       //BORRAMOS NOTICIAS DE LA BASE DE DATOS
+
+      await connection.query(
+        `
+            DELETE 
+            FROM votos
+            WHERE id_noticia=?
+            `,
+        [id]
+      );
+      
       await connection.query(
         `
             DELETE 
@@ -16,6 +26,8 @@ async function borrarNoticia(req, res, next) {
             `,
         [id]
       );
+
+     
     } catch (error) {
       throw new Error("No se pudo borrar la noticia de la base de datos");
     }

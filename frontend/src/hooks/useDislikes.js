@@ -15,7 +15,7 @@ const useDislikes = (idNoticia) => {
     cargarDislikes();
   }, [idNoticia]);
 
-  return dislikes;
+  return [dislikes, setDislikes];
 };
 
 export default useDislikes;

@@ -15,7 +15,7 @@ const useLikes = (idNoticia) => {
     cargarLikes();
   }, [idNoticia]);
 
-  return likes;
+  return [likes, setLikes];
 };
 
 export default useLikes;
