@@ -544,6 +544,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.noticiaPage .ficha_noticia {
   transform: translateX(-10%)
 }
 
