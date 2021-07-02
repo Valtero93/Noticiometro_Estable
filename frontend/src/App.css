@@ -1,24 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #bfcbe1;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* LOGIN */
+
 .align {
   display: grid;
   place-items: center;
 }
 
-/* layout/base.css */
-
 :root {
   --htmlFontSize: 100%;
   --bodyBackgroundColor: #2c3338;
   --bodyColor: var(--baseColor);
-  --bodyFontFamily: 'Open Sans';
+  --bodyFontFamily: "Open Sans";
   --bodyFontFamilyFallback: sans-serif;
   --bodyFontSize: 0.875rem;
   --bodyFontWeight: 400;
@@ -43,7 +57,6 @@
   --registerSubmitHoverBackgroundColor: #d44179;
 }
 
-
 .login input,
 .register input {
   background-image: none;
@@ -56,8 +69,8 @@
   transition: background-color 0.3s;
 }
 
-.login input[type='submit'],
-.register input[type='submit']{
+.login input[type="submit"],
+.register input[type="submit"] {
   cursor: pointer;
 }
 
@@ -66,9 +79,9 @@
   gap: var(--formGap);
 }
 
-.form input[type='password'],
-.form input[type='text'],
-.form input[type='submit'] {
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"] {
   inline-size: 100%;
 }
 
@@ -80,18 +93,25 @@
   flex: 1;
 }
 
-/* modules/login.css */
+.colorito {
+  color: #363b41;
+  padding-bottom: 30px;
+}
 
+.colorito2 {
+  color: #363b41;
+  padding-bottom: 30px;
+}
 
 .login {
   color: var(--loginColor);
 }
 
 .login label,
-.login input[type='text'],
-.login input[type='password'],
-.login input[type='submit'],
-.login input[type='email'] {
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="submit"],
+.login input[type="email"] {
   border-radius: var(--loginBorderRadus);
   padding: 1rem;
 }
@@ -103,35 +123,33 @@
   padding-inline: 1.25rem;
 }
 
-.login input[type='password'],
-.login input[type='text'],
-.login input[type='email'] {
+.login input[type="password"],
+.login input[type="text"],
+.login input[type="email"] {
   background-color: var(--loginInputBackgroundColor);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.login input[type='password']:focus,
-.login input[type='password']:hover,
-.login input[type='text']:focus,
-.login input[type='text']:hover {
+.login input[type="password"]:focus,
+.login input[type="password"]:hover,
+.login input[type="text"]:focus,
+.login input[type="text"]:hover {
   background-color: var(--loginInputHoverBackgroundColor);
 }
 
-.login input[type='submit'] {
+.login input[type="submit"] {
   background-color: var(--loginSubmitBackgroundColor);
   color: var(--loginSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 15px;
 }
 
-.login input[type='submit']:focus,
-.login input[type='submit']:hover {
+.login input[type="submit"]:focus,
+.login input[type="submit"]:hover {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
-
-/* modules/text.css */
-
 
 .text--center {
   text-align: center;
@@ -156,10 +174,10 @@
   width: 1px;
 }
 
-.form input[type='email'],
-.form input[type='password'],
-.form input[type='text'],
-.form input[type='submit'] {
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"] {
   inline-size: 100%;
 }
 
@@ -171,17 +189,15 @@
   flex: 1;
 }
 
-/* modules/register.css */
-
 .register {
   color: var(--registerColor);
 }
 
 .register label,
-.register input[type='email'],
-.register input[type='text'],
-.register input[type='password'],
-.register input[type='submit'] {
+.register input[type="email"],
+.register input[type="text"],
+.register input[type="password"],
+.register input[type="submit"] {
   border-radius: var(--registerBorderRadus);
   padding: 1rem;
 }
@@ -193,36 +209,34 @@
   padding-inline: 1.25rem;
 }
 
-.register input[type='email'],
-.register input[type='password'],
-.register input[type='text'] {
+.register input[type="email"],
+.register input[type="password"],
+.register input[type="text"] {
   background-color: var(--registerInputBackgroundColor);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.register input[type='email']:focus,
-.register input[type='email']:hover,
-.register input[type='password']:focus,
-.register input[type='password']:hover,
-.register input[type='text']:focus,
-.register input[type='text']:hover {
+.register input[type="email"]:focus,
+.register input[type="email"]:hover,
+.register input[type="password"]:focus,
+.register input[type="password"]:hover,
+.register input[type="text"]:focus,
+.register input[type="text"]:hover {
   background-color: var(--registerInputHoverBackgroundColor);
 }
 
-.register input[type='submit'] {
+.register input[type="submit"] {
   background-color: var(--registerSubmitBackgroundColor);
   color: var(--registerSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 15px;
 }
 
-.register input[type='submit']:focus,
-.register input[type='submit']:hover {
+.register input[type="submit"]:focus,
+.register input[type="submit"]:hover {
   background-color: var(--registerSubmitHoverBackgroundColor);
 }
-
-/* modules/text.css */
-
 
 .text--center {
   text-align: center;
@@ -237,7 +251,6 @@
   font-weight: 600;
   border-radius: 15px;
   font-size: 1rem;
-
 }
 
 .ficha_avatar {
@@ -245,6 +258,7 @@
 }
 
 /* createPage */
+
 .align {
   display: grid;
   place-items: center;
@@ -267,27 +281,21 @@
   width: 1px;
 }
 
-/* layout/base.css */
-
 :root {
   --htmlFontSize: 100%;
 
   --bodyBackgroundColor: #2c3338;
   --bodyColor: var(--baseColor);
-  --bodyFontFamily: 'Open Sans';
+  --bodyFontFamily: "Open Sans";
   --bodyFontFamilyFallback: sans-serif;
   --bodyFontSize: 0.875rem;
   --bodyFontWeight: 400;
   --bodyLineHeight: 1.5;
 }
 
-/* modules/anchor.css */
-
 :root {
   --anchorColor: rgb(48, 35, 224);
 }
-
-/* modules/form.css */
 
 :root {
   --formGap: 0.875rem;
@@ -312,17 +320,17 @@
 }
 
 .createPage label,
-.createPage input[type='titulo'],
-.createPage input[type='descripcion'],
-.createPage input[type='enlace'] {
+.createPage input[type="titulo"],
+.createPage input[type="descripcion"],
+.createPage input[type="enlace"] {
   border-radius: var(--createPageBorderRadus);
   padding: 1rem;
 }
 
 .createPage label,
-.createPage input[type='titulo'],
-.createPage input[type='descripcion'],
-.createPage input[type='enlace'] {
+.createPage input[type="titulo"],
+.createPage input[type="descripcion"],
+.createPage input[type="enlace"] {
   max-width: fit-content;
 }
 
@@ -333,31 +341,31 @@
   padding-inline: 1.25rem;
 }
 
-.createPage input[type='titulo'],
-.createPage input[type='descripcion'],
-.createPage input[type='enlace'] {
+.createPage input[type="titulo"],
+.createPage input[type="descripcion"],
+.createPage input[type="enlace"] {
   background-color: var(--createPageInputBackgroundColor);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.createPage input[type='email']:focus,
-.createPage input[type='email']:hover,
-.createPage input[type='password']:focus,
-.createPage input[type='password']:hover,
-.createPage input[type='text']:focus,
-.createPage input[type='text']:hover {
+.createPage input[type="email"]:focus,
+.createPage input[type="email"]:hover,
+.createPage input[type="password"]:focus,
+.createPage input[type="password"]:hover,
+.createPage input[type="text"]:focus,
+.createPage input[type="text"]:hover {
   background-color: var(--createPageInputHoverBackgroundColor);
 }
 
-.createPage input[type='submit'] {
+.createPage input[type="submit"] {
   background-color: var(--createPageSubmitBackgroundColor);
   color: var(--createPageSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.createPage input[type='submit']:focus,
-.createPage input[type='submit']:hover {
+.createPage input[type="submit"]:focus,
+.createPage input[type="submit"]:hover {
   background-color: var(--createPageSubmitHoverBackgroundColor);
 }
 
@@ -365,7 +373,6 @@
   margin: 0 auto;
   margin-top: 60px;
 }
-/* modules/text.css */
 
 p {
   margin-block: 1.5rem;
@@ -397,7 +404,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./multimedia/x.png');
+  background: url("./multimedia/x.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -412,7 +419,7 @@ p {
 }
 
 .no_login_title h2 {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 2.25rem;
 }
 
@@ -420,7 +427,9 @@ p {
   font-weight: 400;
   color: rgb(148, 148, 148);
   font-size: 1.75rem;
-  margin: 0;
+  margin-top: 20px;
+  font-size: 16pt;
+  opacity: 0.7;
 }
 
 .no_login_buttons {
@@ -460,21 +469,22 @@ p {
   height: 80%;
   width: 80%;
   border-radius: 10px;
-  box-shadow: 3px 3px 8px rgb(144, 144, 144);
+  box-shadow: 10px 10px 15px -12px rgb(144, 144, 144);
+  -webkit-box-shadow: 10px 10px 15px -12px rgb(144, 144, 144);
+  -moz-box-shadow: 10px 10px 15px -12px rgb(144, 144, 144);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
 }
 
-.page_container_title{
+.page_container_title {
   height: 15%;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgb(204, 204, 204);
   width: 80%;
 }
-
 
 .page_container_title h2 {
   margin-left: 2rem;
@@ -490,7 +500,6 @@ p {
 }
 
 /* PROFILE PAGE */
-
 
 .page_content_form {
   display: flex;
@@ -511,7 +520,7 @@ p {
 
 .page_content_form .inputWrapper label:not(.updateFormAvatar) {
   margin-bottom: 1rem;
-  color:rgb(82, 82, 82)
+  color: rgb(82, 82, 82);
 }
 
 .page_content_form .inputWrapper label.updateFormAvatar img {
@@ -522,10 +531,9 @@ p {
 .page_content_form .inputWrapper input {
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  border: 1px solid rgb(144, 144, 144);
+  border: 1px solid #dde0ee;
   outline: none;
 }
-
 
 .page_content_form input[type="submit"] {
   margin: 1.5rem 0;
@@ -535,7 +543,6 @@ p {
   color: white;
   font-weight: 600;
   border-radius: 15px;
-  box-shadow: 2px 2px 8px rgb(63, 63, 63);
   font-size: 1rem;
 }
 
@@ -547,6 +554,9 @@ p {
 }
 
 .noticiaPage .ficha_noticia {
-  transform: translateX(-10%)
+  transform: translateX(-10%);
 }
-
+#email::placeholder {
+  color: #525252;
+  opacity: 0.3;
+}

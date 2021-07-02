@@ -1,21 +1,3 @@
-@charset "utf-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-body {
-  background-color: #bfcbe1;
-}
-
-.App {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .contenedor {
   display: flex;
   width: 80vw;
@@ -23,20 +5,22 @@ body {
   justify-content: center;
   border-radius: 8px 0px 0px 8px;
   position: relative;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 10px 10px 15px -12px rgb(144, 144, 144);
+  -webkit-box-shadow: 10px 10px 15px -12px rgb(144, 144, 144);
+  -moz-box-shadow: 10px 10px 15px -12px rgb(144, 144, 144);
 }
 .col-1 {
   flex: 1;
   border: 6px;
   border-radius: 8px 0px 0px 8px;
 }
+
 .col-2 {
   flex: 8;
   height: 100%;
   position: relative;
   background-color: rgb(228, 233, 241);
+  border-radius: 0px 8px 8px 0px;
 }
 
 .content {

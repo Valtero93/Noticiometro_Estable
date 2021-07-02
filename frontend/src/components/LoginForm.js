@@ -42,7 +42,7 @@ const LoginForm = (props) => {
             />
           </div>
           <div className="form__field">
-            <label htmlFor="loginPassword">Password</label>
+            <label htmlFor="loginPassword">Contraseña</label>
             <input
               type="password"
               id="loginPassword"

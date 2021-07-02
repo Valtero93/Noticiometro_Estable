@@ -42,7 +42,7 @@ const RegisterForm = (props) => {
       <div className="grid">
         <form className="form register" id="register" onSubmit={register}>
           <div className="form__field">
-            <label htmlFor="registerName">nombre</label>
+            <label htmlFor="registerName">Nombre</label>
             <input
               type="text"
               id="registerName"

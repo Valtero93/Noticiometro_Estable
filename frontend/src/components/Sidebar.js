@@ -9,7 +9,7 @@ import decodeTokenData from "../utils/decodeTokenData";
 const Sidebar = () => {
   const [token] = useContext(TokenContext);
   const decodedToken = decodeTokenData(token);
-  const [,setToken] = useContext(TokenContext);
+  const [, setToken] = useContext(TokenContext);
   const user = useUserProfile(decodedToken?.id, token);
 
   return (
@@ -35,29 +35,26 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-        <Link to="/perfil">
-        {user.imagen ? (
-            <img
-              className={"avatar"}
-              src={`http://localhost:3030/uploads/avatares/${user.imagen}`}
-              alt={`Avatar de ${user.nombre}`}
-            />
-          ) : (
-            <img
-              className={"avatar"}
-              src={defaultAvatar}
-              alt={`Avatar de ${user.nombre}`}
-            />
-          )}
+          <Link to="/perfil">
+            {user.imagen ? (
+              <img
+                className={"avatar"}
+                src={`http://localhost:3030/uploads/avatares/${user.imagen}`}
+                alt={`Avatar de ${user.nombre}`}
+              />
+            ) : (
+              <img
+                className={"avatar"}
+                src={defaultAvatar}
+                alt={`Avatar de ${user.nombre}`}
+              />
+            )}
           </Link>
         </li>
         <li>
-          <button
-            className="botonSalir"
-            onClick={() => setToken("")}
-          >
-            Sign out
-           </button>
+          <button className="botonSalir" onClick={() => setToken("")}>
+            SALIR
+          </button>
         </li>
       </ul>
     </nav>

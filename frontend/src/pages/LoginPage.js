@@ -10,10 +10,12 @@ const LoginPage = (props) => {
     <>
       {!token ? (
         <div>
-          <h2 style={{ fontWeight: "600" }}>Login</h2>
+          <h2 className="colorito" style={{ fontWeight: "600" }}>
+            &nbsp;&nbsp;&nbsp;Login
+          </h2>
           <LoginForm />
-          <p>
-            ¿No tienes cuenta?
+          <p className="muevete">
+            &nbsp;&nbsp;&nbsp;¿No tienes cuenta?&nbsp;
             <Link to="/register" style={{ fontWeight: "bold" }}>
               Regístrate
             </Link>
